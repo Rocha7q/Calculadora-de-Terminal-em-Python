@@ -8,12 +8,14 @@ while True:
     numero_1 = input('Digite um número: ')
     numero_2 = input('Digite outro número: ')
     tipo_de_conta = input('Que tipo de conta você quer realizar (+-*/)?: ')
+    operadores_permitidos = '+-*/'
 
     if numero_1.isdigit() and numero_2.isdigit():
         numero_1 = int(numero_1)
         numero_2 = int(numero_2)
-    
-    operadores_permitidos = '+-*/'
+    else:
+        print('Digite apenas números.')
+        continue
 
     if tipo_de_conta not in operadores_permitidos:
         print('Um ou ambos os operadores digitados não são válidos')
@@ -46,4 +48,4 @@ while True:
         
         else:
             print('Apenas s e n são válidos.')
-            continue
+            continue 
